@@ -42,53 +42,32 @@ Embedded dùng bit thường xuyên vì thanh ghi và giao thức chứa nhiều
 
 # LỘ TRÌNH HỌC EMBEDDED C CƠ BẢN
 
-Học theo thứ tự từ **C nền tảng → mạch điện → vi điều khiển → ngoại vi → dự án thực tế**. Có thể học C và mạch điện song song.
+**C cơ bản → C dùng trong embedded → làm quen MCU → ngoại vi → dự án nhỏ.**
 
-### Giai đoạn 1: C nền tảng
+### 1. Học C cơ bản
 
-- Biến, kiểu dữ liệu, điều kiện, vòng lặp và hàm.
-- Mảng, chuỗi, con trỏ, `struct`; `const`, `static`, `volatile`.
-- Thao tác bit, chia file `.c`/`.h` và quản lý bộ nhớ cơ bản.
+- Biến, kiểu dữ liệu, điều kiện, vòng lặp, hàm, mảng và chuỗi.
+- Tập viết chương trình đơn giản trên máy tính, biết biên dịch và tìm lỗi.
 
-### Giai đoạn 2: Mạch điện cơ bản
+### 2. Nắm các phần C hay dùng trong embedded
 
-- Điện áp, dòng điện, điện trở, công suất; định luật Ohm và Kirchhoff.
-- Điện trở, tụ điện, diode, LED, transistor/MOSFET; mạch hạn dòng, chia áp và lọc nguồn.
-- Nguồn cấp, GND, tín hiệu analog/digital, mức logic 3,3 V/5 V và điện trở kéo lên/kéo xuống (pull-up/pull-down).
-- Đọc sơ đồ mạch, xác định chân linh kiện và dùng đồng hồ vạn năng.
+- Con trỏ, `struct`, `enum`; hệ nhị phân, hex và thao tác bit.
+- Hiểu các từ khóa `const`, `static`, `volatile`, bộ nhớ và cách chia file `.c`/`.h`.
+- Thực hành xử lý mảng dữ liệu, đặt/xóa/kiểm tra bit.
 
-### Giai đoạn 3: Làm quen với vi điều khiển (MCU)
+### 3. Làm quen vi điều khiển (MCU)
 
-- CPU, Flash, RAM, thanh ghi, clock và reset.
-- Đọc datasheet để biết thông số, reference manual để cấu hình ngoại vi, schematic để biết cách nối mạch.
-- Tạo project, biên dịch, nạp chương trình và debug trên board.
+- Tìm hiểu CPU, RAM, Flash, thanh ghi và cách đọc tài liệu chip.
+- Dùng một board có sẵn để tập build, nạp code, debug; bắt đầu bằng nháy LED và đọc nút nhấn.
 
-### Giai đoạn 4: GPIO, timer và ngắt
+### 4. Học các ngoại vi cơ bản
 
-- GPIO: điều khiển LED, đọc nút nhấn và chống dội phím.
-- Timer: đo thời gian, tạo chu kỳ và tránh chờ bằng delay dài.
-- Ngắt: xử lý sự kiện phần cứng, giữ hàm phục vụ ngắt ngắn và bảo vệ dữ liệu dùng chung.
+- Lần lượt học GPIO → timer và ngắt → UART → ADC/PWM → I²C/SPI.
+- Mỗi phần làm một bài nhỏ: gửi dữ liệu, đọc cảm biến hoặc điều khiển độ sáng LED.
 
-### Giai đoạn 5: Giao tiếp UART, I²C và SPI
+### 5. Ghép thành dự án nhỏ
 
-- UART: gửi log, nhận lệnh từ máy tính.
-- I²C/SPI: kết nối cảm biến, màn hình hoặc bộ nhớ ngoài.
-- Hiểu cách nối dây, cấu hình giao tiếp, xử lý bộ đệm và timeout.
+- Ví dụ: đọc cảm biến theo chu kỳ, gửi kết quả qua UART và bật LED khi vượt ngưỡng.
+- Khi đã vững, tìm hiểu thêm máy trạng thái, viết driver và RTOS.
 
-### Giai đoạn 6: ADC và PWM
 
-- ADC: đọc điện áp analog, chuyển đổi thành giá trị đo và lọc nhiễu cơ bản.
-- PWM: điều chỉnh độ sáng LED hoặc điều khiển tải qua mạch công suất phù hợp.
-- Kiểm tra giới hạn điện áp, dòng điện và nguồn cấp khi nối MCU với mạch ngoài.
-
-### Giai đoạn 7: Tổ chức firmware và tìm lỗi
-
-- Tách phần điều khiển phần cứng (driver) khỏi logic ứng dụng; dùng máy trạng thái khi cần.
-- Quản lý RAM/Flash, stack, buffer và xử lý lỗi.
-- Debug bằng breakpoint, log UART và đo tín hiệu thực tế.
-
-### Giai đoạn 8: Dự án thực tế và mở rộng
-
-- Ghép cảm biến, nút nhấn, LED và UART thành một dự án hoàn chỉnh.
-- Viết tài liệu nối mạch, cách chạy và kiểm tra các tình huống lỗi.
-- Sau khi vững nền tảng, học thêm RTOS: task, lập lịch, queue, semaphore và mutex.
