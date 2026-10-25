@@ -1,22 +1,22 @@
 # Struct Pointer
 
-## 1.Muc tieu
+## 1.Mục tiêu
 
 * Hiểu cách tạo và sử dụng con trỏ trỏ tới biến kiểu struct.
 * Nắm rõ cú pháp truy xuất thành viên struct thông qua con trỏ bằng toán tử mũi tên (`->`).
 * Tối ưu hiệu năng chương trình khi truyền struct dung lượng lớn vào các hàm.
 
-## 2.Khai niem
+## 2.Khái niệm
 
 * Struct Pointer (Con trỏ Struct) là biến con trỏ lưu trữ địa chỉ vùng nhớ của một biến kiểu struct.
 
-## 3.Cu phap
+## 3.Cú pháp
 
 Cú pháp khai báo: `struct StructName *ptr;`
 
 Cách truy xuất thành viên: `ptr->member_name` (tương đương với `(*ptr).member_name`).
 
-## 4.Co che hoat dong
+## 4.Cơ chế hoạt động
 
 * Con trỏ chỉ lưu trữ địa chỉ bắt đầu của struct trong RAM (kích thước con trỏ là 4 bytes hoặc 8 bytes).
 * Toán tử `->` tự động giải con trỏ và tính khoảng cách (offset) đến thuộc tính cần truy cập.
@@ -48,7 +48,7 @@ int main() {
 }
 ```
 
-## 6.Ung dung thuc te
+## 6.Ứng dụng thực tế
 
 * Ánh xạ các thanh ghi phần cứng (Hardware Registers) trong vi điều khiển.
 * Xây dựng các cấu trúc dữ liệu động như Danh sách liên kết (Linked List), Cây (Tree), Hàng đợi (Queue).
