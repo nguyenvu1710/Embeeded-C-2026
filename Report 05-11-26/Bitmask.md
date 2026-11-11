@@ -1,0 +1,1 @@
+Bitmask (mặt nạ bit) là một chuỗi các bit được sử dụng kết hợp với các phép toán thao tác bit (bitwise operations như AND, OR, XOR, NOT) để kiểm tra, bật, tắt hoặc đảo trạng thái của các bit cụ thể trong một số nguyên.
