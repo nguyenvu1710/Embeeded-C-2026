@@ -32,7 +32,7 @@ Ví dụ minh họa Memory Padding:
     }; // Kích thước thực tế = 12 bytes (thay vì 1 + 4 + 2 = 7 bytes)
 
 ## 5.Vi du minh hoa:
-
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -52,7 +52,7 @@ int main(void) {
 
     return 0;
 }
-
+```
 Terminal: ID: 101, Name: Nguyen Van A, Salary: 1500,50
 
 ## 6.Ung dung:

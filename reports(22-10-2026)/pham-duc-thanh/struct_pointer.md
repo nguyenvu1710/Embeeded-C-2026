@@ -18,7 +18,7 @@ Khi gán một con trỏ trỏ tới struct:
 Trình biên dịch (Compiler) sẽ tự động tính toán khoảng cách (Offset) từ đầu struct đến thành viên bạn muốn truy cập dựa trên kích thước của các thành viên đứng trước nó.
 
 ## 5.Vi du minh hoa:
-
+```c
 #include <stdio.h>
 
 typedef struct {
@@ -43,7 +43,7 @@ int main(void) {
     printf("X: %d, Y: %d, Z: %d\n", mySensor.x, mySensor.y, mySensor.z);
     return 0;
 }
-
+```
 Terminal: X: 100, Y: 205, Z: 1024
 
 ## 6.Ung dung:

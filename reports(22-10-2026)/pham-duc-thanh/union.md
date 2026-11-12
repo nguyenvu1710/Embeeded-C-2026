@@ -22,7 +22,7 @@ Cách truy xuất: Sử dụng toán tử dấu chấm (.) giống như struct �
 - Kích thước bộ nhớ: Kích thước (dung lượng byte) của một union được xác định bởi thành viên có kích thước lớn nhất trong danh sách khai báo đó, chứ không phải tổng kích thước của tất cả các thành viên như struct
 
 ## 5.Vi du minh hoa:
-
+```C
 #include <stdio.h>
 
 union Data {
@@ -44,7 +44,7 @@ int main(void) {
     printf("Kich thuoc bo nho: %lu bytes\n", sizeof(union Data)); // 20 bytes
     return 0;
 }
-
+```
 Terminal:   data.i = 10
             data.f = 220.5
             data.i (bi ghi che) = 1130135552
@@ -52,7 +52,7 @@ Terminal:   data.i = 10
 
 
 * Do union không tự lưu trữ thông tin về việc thành phần nào đang chứa dữ liệu hợp lệ, lập trình viên thường kết hợp struct và enum để tạo ra một "Variant Type".
-
+```c
 #include <stdio.h>
 
 typedef enum { TYPE_INT, TYPE_FLOAT, TYPE_STRING } DataType;
@@ -73,7 +73,7 @@ void print_variant(const Variant *v) {
         case TYPE_STRING: printf("String: %s\n", v->value.str_val); break;
     }
 }
-
+```
 ## 6.Ung dung:
 - Trình biên dịch/Thông dịch (Parsers/Interpreters): Xây dựng Cây cú pháp trừu tượng (AST) đại diện cho các hằng số số nguyên, số thực hoặc chuỗi ký tự.
 - Tiết kiệm bộ nhớ: Khi xử lý mảng lớn chứa các đối tượng có các thuộc tính thay đổi tùy theo phân loại.
