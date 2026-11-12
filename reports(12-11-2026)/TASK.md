@@ -1,0 +1,1 @@
+Task:  Làm 1 project nhỏ chia file.h/.c ra, sử dụng assert(va_start, va_list, ... ), stdarg với mục tiêu: cho 2 dãy số bất kì ( biêt số lượng số trong dãy số), lấy tổng của từng dãy và cho 2 tổng đó chia nhau, kiểm tra xem mẫu có đạt điêu kiện không
