@@ -22,4 +22,17 @@ EXECUTE (Thực thi) = bit thứ 2 (giá trị 2^2 = 4)
 
 
 ## Cách gộp quyền (Dùng phép OR)
-Nếu một người dùng vừa có quyền READ ($1$) vừa có quyền WRITE ($2$):$$\text{Bitmask} = 1 \mid 2 = 3 \quad (\text{hệ nhị phân: } 011_2)$$Cách kiểm tra quyền (Dùng phép AND)Kiểm tra xem người dùng có quyền WRITE (giá trị $2$) hay không:$$\text{Bitmask} \ \& \ 2 = 3 \ \& \ 2 = 2 \quad (\neq 0 \rightarrow \text{Có quyền})$$Cách thêm quyền mới (Dùng phép OR)Thêm quyền EXECUTE (giá trị $4$) vào bitmask hiện tại (3):$$\text{Bitmask mới} = 3 \mid 4 = 7 \quad (\text{hệ nhị phân: } 111_2 \rightarrow \text{Đủ cả 3 quyền})$$
+Nếu một người dùng vừa có quyền READ 1 vừa có quyền WRITE 2:
+
+Bitmask = 1 | 2 = 3
+
+
+## Cách kiểm tra quyền (Dùng phép AND)
+Kiểm tra xem người dùng có quyền WRITE 2 hay không:
+
+Bitmask & 2 =3 &2 =2
+
+## Cách thêm quyền mới (Dùng phép OR)
+Thêm quyền EXECUTE 4 vào bitmask hiện tại 
+
+Bitmask = 3|4 = 7 (hệ nhị phân 111- đủ cả 3 quyền)
