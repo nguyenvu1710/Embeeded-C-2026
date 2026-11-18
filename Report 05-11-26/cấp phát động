@@ -1,3 +1,0 @@
-#định nghĩa
-Cấp phát động (Dynamic Memory Allocation) là cách một chương trình máy tính xin cấp một khoản bộ nhớ (RAM) trong lúc chương trình đang chạy (runtime), thay vì phải ấn định sẵn kích thước từ lúc viết code (cấp phát tĩnh).
-#phân biệt
