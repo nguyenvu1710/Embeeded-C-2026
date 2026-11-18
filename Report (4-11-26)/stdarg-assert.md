@@ -14,9 +14,10 @@
 - stdarg.h là một thư viện chuẩn trong ngôn ngữ lập trình C, cung cấp các kiểu dữ liệu và macro cho phép một hàm có thể nhận số lượng đối số (arguments) không cố định (hay còn gọi là hàm biến thiên - variadic functions, ví dụ điển hình là hàm printf hay scanf).
 
 ## 3. Thành phần chính trong stdarg.h
-|**`va_list`** |Kiểu dữ liệu dùng để khai báo một biến đại diện cho danh sách các đối số chưa biết. | 
+|  |  | 
 |-|-|
-|**`va_start()`**| Kiểu dữ liệu dùng để khai báo một biến đại diện cho danh sách các đối số chưa biết. |
+|**`va_list`** |Kiểu dữ liệu dùng để khai báo một biến đại diện cho danh sách các đối số chưa biết. | 
+|**`va_start()`**| dùng để khởi tạo danh sách các tham số biến đổi trong một hàm có số lượng tham số không cố định (như `printf`). |
 |**`va_arg()`**| Macro dùng để lấy giá trị của đối số hiện tại ra khỏi danh sách và dịch chuyển con trỏ sang đối số tiếp theo (cần truyền kèm kiểu dữ liệu của đối số đó).|
 |**`va_end()`**| Macro dọn dẹp và kết thúc việc xử lý danh sách đối số biến đổi (bắt buộc phải gọi trước khi hàm kết thúc).|
 |**`va_copy()`**|Dùng để sao chép một danh sách|
@@ -69,7 +70,7 @@ assert(condition);
 ```
 ## 8.  So sánh stdarg.h và assert.h
 |  | `stdarg.h` |`assert.h`|
-|-|-|-|-|
+|-|-|-|
 |Mục đích|Xử lý tham số biến đổi|Kiểm tra điều kiện|
 |Thành phần chính|`va_start`, `va_arg`, `va_end`, `va_list`|`assert()`|
 |Loại|Các macro và kiểu dữ liệu|Macro|
