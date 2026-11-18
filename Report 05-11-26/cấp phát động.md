@@ -10,16 +10,16 @@ Xin cấp phát một vùng nhớ có kích thước bằng size (tính bằng b
 
 Đặc điểm: Vùng nhớ mới cấp phát sẽ chứa các giá trị rác (giá trị ngẫu nhiên đang có sẵn trong RAM tại thời điểm đó).
 
--**calloc(num, size) (Contiguous Allocation)**:
+- **calloc(num, size) (Contiguous Allocation)**:
 
 Xin cấp phát bộ nhớ cho num phần tử, mỗi phần tử có kích thước size byte.
 
 Đặc điểm: Khác với malloc, calloc sẽ tự động gôm sạch và khởi tạo tất cả các byte bằng 0.
 
--**realloc(ptr, new_size) (Re-allocation)**:
+- **realloc(ptr, new_size) (Re-allocation)**:
 
 Dùng khi bạn đã xin một vùng nhớ rồi nhưng thấy không đủ (hoặc thừa), muốn nới rộng hoặc thu hẹp lại. Nó sẽ điều chỉnh kích thước của vùng nhớ cũ (ptr) thành new_size.
 
--**free(ptr)**:
+- **free(ptr)**:
 
 Cực kỳ quan trọng! Sau khi dùng xong vùng nhớ trỏ bởi ptr, bạn phải gọi hàm này để trả lại bộ nhớ cho hệ thống. Nếu quên gọi, chương trình sẽ bị rò rỉ bộ nhớ (memory leak).
