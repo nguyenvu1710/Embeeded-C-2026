@@ -2,7 +2,7 @@
 Cấp phát động (Dynamic Memory Allocation) là cách một chương trình máy tính xin cấp một khoản bộ nhớ (RAM) trong lúc chương trình đang chạy (runtime), thay vì phải ấn định sẵn kích thước từ lúc viết code (cấp phát tĩnh).
 # phân biệt
 - **Cấp phát tĩnh** Trong code: int arr[100]; (Cố định mảng 100 phần tử từ lúc biên dịch)
-- **cấp phát động** Trong code: Bạn xin hệ điều hành một vùng nhớ vừa đủ dùng bằng câu lệnh, dùng xong thì trả lại (giải phóng) để tiết kiệm RAM.
+- **cấp phát động** Trong code: xin hệ điều hành một vùng nhớ vừa đủ dùng bằng câu lệnh, dùng xong thì trả lại (giải phóng) để tiết kiệm RAM.
 # các hàm cấp phát động
 - **malloc(size) (Memory Allocation)**:
 
